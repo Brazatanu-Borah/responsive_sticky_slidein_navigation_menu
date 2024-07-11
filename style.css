@@ -1,0 +1,176 @@
+/* Standard Style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+/* html {
+  min-height: 100%;
+} */
+
+.logo {
+  height: 30px;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.section-main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('pexels-toulouse-10807656.jpg') no-repeat center center/cover;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.section-main h1 {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 80px;
+}
+
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+
+  transition: all 0.5s ease;
+}
+
+header .brand {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+header .menu {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 30px;
+  padding: 3px 12px;
+  border: solid 1px #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+header .menu a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+header .btn {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.section-two {
+  min-height: 100vh;
+  background-color: rgb(0, 16, 24);
+  padding: 20px 100px;
+}
+
+.section-two h2 {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.section-two p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+
+/* Sticky Navigation Bar Styles */
+header.sticky {
+  background-color: rgba(68, 13, 3, 0.8);
+  padding: 10px 50px;
+}
+
+
+/* Responsive Navigation Bar Styles */
+@media screen and (max-width: 1060px) {
+  header .btn {
+    display: block;
+  }
+
+  header .menu {
+    position: fixed;
+    background-color: rgba(68, 13, 3, 0.95);
+    flex-direction: column;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 80px 50px;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 25px;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+
+  header .menu {
+    left: -100%;
+    transition: all 0.5s ease;
+  }
+
+  header .menu.active {
+    left: 0;
+  }
+
+}
+
+@media screen and (max-width: 630px) {
+  .section-main h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
